@@ -26,7 +26,7 @@
  * @param {number[]} nums
  * @return {number}
  */
-var dominantIndex = function(nums) {
+var dominantIndex = function (nums) {
     let largest = 0;
     let secondLargest = 1;
 
@@ -47,11 +47,10 @@ var dominantIndex = function(nums) {
             let temp = largest;
             largest = i;
             secondLargest = temp;
-        }
-        else if (nums[i] > nums[secondLargest]) {
+        } else if (nums[i] > nums[secondLargest]) {
             secondLargest = i;
         }
     }
 
-    return (nums[largest] >= (nums[secondLargest]*2)) ? largest : -1;
+    return (nums[largest] >= (nums[secondLargest] * 2)) ? largest : -1;
 };

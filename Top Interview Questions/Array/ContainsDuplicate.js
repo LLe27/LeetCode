@@ -18,12 +18,12 @@
  * @param {number[]} nums
  * @return {boolean}
  */
-var containsDuplicate = function(nums) {
+var containsDuplicate = function (nums) {
     // Sort array
     nums.sort();
-    for (var i = 0; i < nums.length-1; i++) {
-        if (nums[i] == nums[i+1]) return true;
+    for (var i = 0; i < nums.length - 1; i++) {
+        if (nums[i] == nums[i + 1]) return true;
     }
-    
+
     return false;
 };

@@ -26,28 +26,28 @@
  * @param {number[]} prices
  * @return {number}
  */
-var maxProfit = function(prices) {
+var maxProfit = function (prices) {
     var buy = 0;
     var sell = 0;
     var i = 0;
-    var N = prices.length-1;
+    var N = prices.length - 1;
     var profit = 0;
-    
+
     while (i < N) {
         // Find minimum buy price
-        while (i < N && prices[i+1] <= prices[i]) { 
-            i++ 
+        while (i < N && prices[i + 1] <= prices[i]) {
+            i++
         }
         buy = prices[i];
-        
-        // FInd maximum sell price
-        while (i < N && prices[i+1] > prices[i]) { 
-            i++ 
+
+        // Find maximum sell price
+        while (i < N && prices[i + 1] > prices[i]) {
+            i++
         }
         sell = prices[i];
-        
+
         profit += sell - buy;
     }
-    
+
     return profit;
 };

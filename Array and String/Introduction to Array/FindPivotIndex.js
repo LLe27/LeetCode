@@ -30,20 +30,19 @@
  * @param {number[]} nums
  * @return {number}
  */
-var pivotIndex = function(nums) {
+var pivotIndex = function (nums) {
     if (nums.length == 0) return -1;
-    
+
     const sum = nums.reduce((acc, num) => acc + num);
     let sumLeft = 0;
     let sumRight = sum;
-    
+
     for (var i = 0; i < nums.length; i++) {
-        if (i > 0) sumLeft += nums[i-1];
+        if (i > 0) sumLeft += nums[i - 1];
         sumRight -= nums[i];
-        
+
         if (sumLeft == sumRight) return i;
     }
-    
-    
+
     return -1;
 };

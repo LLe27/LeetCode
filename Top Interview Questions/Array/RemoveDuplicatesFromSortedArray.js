@@ -44,12 +44,12 @@
  * @param {number[]} nums
  * @return {number}
  */
-var removeDuplicates = function(nums) {
+var removeDuplicates = function (nums) {
     for (var x = 0; x < nums.length; x++) {
-        while (nums[x] == nums[x+1]) {
+        while (nums[x] == nums[x + 1]) {
             nums.splice(x, 1);
         }
     }
-    
+
     return nums.length;
 };
